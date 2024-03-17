@@ -7,4 +7,4 @@ const CarSchema = new Schema ({
     power : Number,
 })
 
-export const model = mongoose.model("Car" , CarSchema);
+export const Carmodel = mongoose.model("Car" , CarSchema);
