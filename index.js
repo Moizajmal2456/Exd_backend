@@ -1,7 +1,10 @@
 import express from "express";
 import mongoose from "mongoose";
+const productRoutes = require("./Routes/ProductRoutes");
 const app = express();
+app.use(express.json());
 
+app.use("/api" , productRoutes);
 
 mongoose.connect("mongodb://0.0.0.0:27017/Exd-Backend");
 
