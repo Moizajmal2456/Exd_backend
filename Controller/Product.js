@@ -39,6 +39,7 @@ export const updateProduct = async(req , res) => {
     res.status(400).Json({success: false , message:"Product not update. Error is" , error});
   }
 }
+
 export const deleteProduct = async(req , res) => {
   try{
     const product = await ProductModel.findByIdAndDelete(req.id);
@@ -48,3 +49,7 @@ export const deleteProduct = async(req , res) => {
     res.status(200).Json({success: false , message:"User does not delete. Error is" , error});
   }
 }
+
+exports.createUser = async (userData) => {
+  return await User.create(userData);
+};
